@@ -1,0 +1,4 @@
+{
+  "tiers": {},
+  "note": "Populated by `make smoke`, which resolves each tier to a dated snapshot id. Never use -latest: aliases move and break reproducibility."
+}

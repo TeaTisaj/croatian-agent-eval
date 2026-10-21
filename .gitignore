@@ -1,0 +1,17 @@
+.env
+.forbidden-strings
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*.egg-info/
+report/figures/*.png
+
+# Pilot artifacts. The real traces and results.db ARE committed, but only once
+# the full matrix has run - a partial pilot from a harness under repair would
+# misrepresent what this repo claims to contain.
+traces/*.json
+results/*.db
+!traces/.gitkeep
+!results/.gitkeep

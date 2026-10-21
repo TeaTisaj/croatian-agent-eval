@@ -1,0 +1,28 @@
+# Frozen experiment configuration.
+# Everything that could drift between runs is pinned here.
+
+[clock]
+# Tuesday. "sutra" -> 2026-03-11 (Wed), "prekosutra" -> 2026-03-12 (Thu),
+# "u subotu" -> 2026-03-14. Salon is closed Sundays.
+frozen_now = "2026-03-10T09:00:00+01:00"
+timezone = "Europe/Zagreb"
+
+[matrix]
+conditions = ["HR_HR", "HR_EN", "EN_EN"]
+repeats = 3
+temperature = 0.0
+max_tool_calls = 8
+max_turns = 10
+
+[limits]
+# Free-tier safe. Measured and adjusted at Block 0 go/no-go.
+requests_per_second = 2.5
+max_concurrency = 3
+max_retries = 5
+# Runner aborts rather than silently burning the monthly free quota.
+token_budget_ceiling = 20_000_000
+
+[judge]
+# Judge must never be a model under test (self-evaluation bias).
+provider = "gemini"
+judge_repeat_only = 1
