@@ -1,0 +1,37 @@
+{
+  "_comment": "ENTIRELY FICTIONAL. Synthetic data for a small salon booking system; no real business, staff or customer data.",
+  "business": { "name": "Salon Jadran" },
+  "locations": [
+    { "id": "zg-centar", "name_hr": "Zagreb-Centar", "name_en": "Zagreb City Centre" },
+    { "id": "split", "name_hr": "Split", "name_en": "Split" }
+  ],
+  "staff": [
+    { "id": "iva",   "name": "Iva",   "location_id": "zg-centar", "services": ["zensko_sisanje", "bojanje", "pramenovi", "pranje_fen"] },
+    { "id": "marko", "name": "Marko", "location_id": "zg-centar", "services": ["musko_sisanje", "fade", "brijanje"] },
+    { "id": "petra", "name": "Petra", "location_id": "split",     "services": ["zensko_sisanje", "musko_sisanje", "pranje_fen", "bojanje"] }
+  ],
+  "services": [
+    { "id": "musko_sisanje",  "name_hr": "Muško šišanje",  "name_en": "Men's haircut",    "duration_min": 30, "price_eur": 18 },
+    { "id": "zensko_sisanje", "name_hr": "Žensko šišanje", "name_en": "Women's haircut",  "duration_min": 45, "price_eur": 30 },
+    { "id": "fade",           "name_hr": "Fade šišanje",   "name_en": "Fade haircut",     "duration_min": 30, "price_eur": 20 },
+    { "id": "brijanje",       "name_hr": "Brijanje",       "name_en": "Shave",            "duration_min": 20, "price_eur": 12 },
+    { "id": "pranje_fen",     "name_hr": "Pranje i fen",   "name_en": "Wash and blow-dry","duration_min": 30, "price_eur": 15 },
+    { "id": "bojanje",        "name_hr": "Bojanje kose",   "name_en": "Hair colouring",   "duration_min": 90, "price_eur": 60 },
+    { "id": "pramenovi",      "name_hr": "Pramenovi",      "name_en": "Highlights",       "duration_min": 120,"price_eur": 80 }
+  ],
+  "hours": {
+    "_comment": "weekday index 0=Mon .. 6=Sun; null = closed",
+    "0": ["09:00", "20:00"], "1": ["09:00", "20:00"], "2": ["09:00", "20:00"],
+    "3": ["09:00", "20:00"], "4": ["09:00", "20:00"], "5": ["09:00", "14:00"],
+    "6": null
+  },
+  "seeded_appointments": [
+    { "staff_id": "marko", "start": "2026-03-11T10:00:00", "duration_min": 30 },
+    { "staff_id": "marko", "start": "2026-03-11T14:30:00", "duration_min": 30 },
+    { "staff_id": "iva",   "start": "2026-03-11T09:00:00", "duration_min": 90 },
+    { "staff_id": "iva",   "start": "2026-03-14T10:00:00", "duration_min": 45 },
+    { "staff_id": "marko", "start": "2026-03-14T09:00:00", "duration_min": 30 },
+    { "staff_id": "marko", "start": "2026-03-14T09:30:00", "duration_min": 30 },
+    { "staff_id": "petra", "start": "2026-03-12T11:00:00", "duration_min": 45 }
+  ]
+}
